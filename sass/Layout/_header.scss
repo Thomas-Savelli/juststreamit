@@ -1,0 +1,29 @@
+.header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    // Autres styles spécifiques à l'en-tête
+  
+    &__logo {
+      max-width: 100px;
+      height: auto;
+      // Styles pour le logo
+    }
+  
+    &__title {
+      font-size: 24px;
+      margin-left: 20px;
+      // Styles pour le titre de l'en-tête
+    }
+  
+    &__nav {
+      margin-left: auto;
+      // Styles pour la navigation
+  
+      &-link {
+        color: #333;
+        text-decoration: none;
+        margin-left: 10px;
+        // Styles pour chaque lien de navigation
+      }
+    }
+  }

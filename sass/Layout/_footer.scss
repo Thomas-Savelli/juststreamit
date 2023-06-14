@@ -1,0 +1,50 @@
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    // Autres styles spécifiques au footer
+  
+    &__title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      // Styles pour les titres de section
+    }
+  
+    &__text {
+      margin-bottom: 8px;
+      // Styles pour les paragraphes de texte
+    }
+  
+    &__list {
+      list-style: none;
+      padding: 0;
+      // Styles pour les listes
+    }
+  
+    &__link {
+      color: #333;
+      text-decoration: none;
+      // Styles pour les liens du footer
+    }
+  
+    &__social-media {
+      display: flex;
+      align-items: center;
+      // Styles pour les icônes de médias sociaux
+  
+      li {
+        margin-right: 10px;
+        // Styles pour chaque icône
+      }
+    }
+  
+    .bottom-footer {
+      margin-top: 20px;
+      text-align: center;
+      // Styles pour le bas du footer
+  
+      p {
+        font-size: 14px;
+        // Styles pour le texte du bas du footer
+      }
+    }
+  }
