@@ -1,16 +1,26 @@
 .header {
-    background-color: #f5f5f5;
+    background-color: $background_color;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10em;
+    padding-left: 5em;
+    margin-top: 2.6em;
+    border-top: 2px solid $color_titre;
     // Autres styles spécifiques à l'en-tête
   
     &__logo {
       max-width: 100px;
       height: auto;
+      padding-right: 2em;
       // Styles pour le logo
     }
   
     &__title {
-      font-size: 24px;
+      font-family: $fontfamily_titre;
+      color: $color_titre;
+      font-size: $first_size;
       margin-left: 20px;
       // Styles pour le titre de l'en-tête
     }
@@ -20,10 +30,20 @@
       // Styles pour la navigation
   
       &-link {
-        color: #333;
+        color: $first_color;
         text-decoration: none;
         margin-left: 10px;
+        font-family: $fontfamily_soustitre;
+        font-size: $second_size;
+        padding-right: 1em;
+        padding-left: 1em;
         // Styles pour chaque lien de navigation
+        &:hover{
+          color: $color_hover;
+        &:active{
+          color: $color_active;
+        }
+        }
       }
     }
   }
