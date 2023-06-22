@@ -20,7 +20,7 @@ body {
 .gallery__wrap h2 {
   position: absolute;
   top: -40px;
-  left: 380px;
+  left: 250px;
   right: 0;
   margin: 0;
   text-align: left;
@@ -36,7 +36,7 @@ body {
   display: none;
 }
 .gallery__wrap .gallery__liste {
-  width: 100%;
+  width: 200%;
   display: flex;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-gap: 20px;
@@ -44,7 +44,7 @@ body {
   flex: none;
 }
 .gallery__wrap .gallery__liste__films {
-  width: 150%;
+  width: 200%;
   filter: grayscale(100%);
   transition: transform 0.5s;
 }
@@ -62,10 +62,10 @@ body {
   transform: translateY(-50%);
 }
 .gallery__wrap .backBtn {
-  left: 250px;
+  left: 180px;
 }
 .gallery__wrap .nextBtn {
-  right: 250px;
+  right: 170px;
 }
 
 .header {
@@ -93,7 +93,16 @@ body {
 .header__nav {
   margin-left: auto;
 }
-.header__nav-link {
+.header__nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header__nav ul li {
+  display: inline-block;
+  position: relative;
+}
+.header__nav ul li a {
   color: white;
   text-decoration: none;
   margin-left: 10px;
@@ -102,11 +111,23 @@ body {
   padding-right: 1em;
   padding-left: 1em;
 }
-.header__nav-link:hover {
+.header__nav ul li a:hover {
   color: #2069EB;
 }
-.header__nav-link:hover:active {
+.header__nav ul li a:active {
   color: #0099FF;
+}
+.header__nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.header__nav ul li ul li {
+  display: block;
+}
+.header__nav ul li:hover ul {
+  display: block;
 }
 
 .footer {
