@@ -14,16 +14,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10% auto;
+  margin: 5% auto;
   position: relative;
 }
 .gallery__wrap h2 {
   position: absolute;
   top: -40px;
-  left: -1500px;
+  left: 380px;
   right: 0;
   margin: 0;
-  text-align: center;
+  text-align: left;
   color: #2069EB;
   font-size: 2em;
 }
@@ -37,14 +37,14 @@ body {
 }
 .gallery__wrap .gallery__liste {
   width: 100%;
-  display: grid;
+  display: flex;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-gap: 20px;
   padding: 10px;
   flex: none;
 }
 .gallery__wrap .gallery__liste__films {
-  width: 100%;
+  width: 150%;
   filter: grayscale(100%);
   transition: transform 0.5s;
 }
