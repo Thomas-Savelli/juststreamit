@@ -4,6 +4,8 @@ body {
   }
   
   .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    color: $color_base;
+    background-image: $background_image;
   }
