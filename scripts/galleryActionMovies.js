@@ -38,9 +38,16 @@ async function fetchActionMovies() {
     // Générer les éléments HTML pour chaque film et les ajouter à la galerie
     movies.forEach((movie) => {
       const movieImage = document.createElement('img');
-      movieImage.src = movie.image_url;
       movieImage.alt = movie.title;
       movieImage.classList.add('gallery__liste__films');
+
+      // Vérifier si le film a une URL d'image valide
+      if (isValidImageUrl(movie.image_url)) {
+        movieImage.src = movie.image_url;
+      } else {
+        // Utiliser une image de remplacement à partir du dossier d'images
+        movieImage.src = "../public/images/image404error.jpg";
+      }
 
       actionGallery.appendChild(movieImage);
     });
@@ -48,5 +55,12 @@ async function fetchActionMovies() {
     console.error(error);
   }
 }
+
+// Fonction pour vérifier si une URL d'image est valide
+function isValidImageUrl(url) {
+  // Vérifier si l'URL commence par "http://" ou "https://"
+  return /^https?:\/\/.*$/i.test(url);
+}
+
 
 fetchActionMovies();

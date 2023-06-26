@@ -1,3 +1,13 @@
+.footer-container{
+  background-color: $background_color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+
 .footer {
     padding: 20px;
     // Autres styles spécifiques au footer
@@ -6,7 +16,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      align-content: center;
+ 
+
       font-size: $thrid_size;
     }
     &__title {
@@ -17,11 +28,13 @@
     }
   
     &__text {
-      margin-bottom: 8px;
+      font-family: $fontfamily_special;
+      margin-bottom: 5%;
       // Styles pour les paragraphes de texte
     }
   
     &__list {
+      font-family: $fontfamily_special;
       list-style: none;
       padding: 0;
       // Styles pour les listes
@@ -35,32 +48,32 @@
   
     &__social-media {
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       // Styles pour les icônes de médias sociaux
   
       li {
-        margin-right: 10px;
+        list-style: none;
+        margin-right: 0%;
         // Styles pour chaque icône
+
+        img{
+          width: 3%;
+          height: auto;
+        }
       }
     }
   
     .bottom-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 20px;
+      font-size: $second_size;
       // Styles pour le bas du footer
-  
-      p {
-        font-size: $second_size;
-        // Styles pour le texte du bas du footer
+      &__text{
+        font-size: $thrid_size;
       }
     }
-  }
-
-  .footer-container{
-    background-color: $background_color;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 6em;
-    padding-bottom: 1em;
-    padding-left: 1em;
   }

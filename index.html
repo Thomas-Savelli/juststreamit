@@ -7,20 +7,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link rel="icon" href="./public/images/Sans titre - 3.png" type="image/x-icon">
-        <link rel="shortcut icon" href="./public/images/Sans titre - 3.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./public/images/juststreamit_logo3.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative:wght@700&family=Lobster&family=Orbitron&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative:wght@700&family=Foldit:wght@500&family=Lobster&family=Orbitron&family=Secular+One&display=swap" rel="stylesheet">
-        <script src="./scripts/script.js" defer></script>
         <script src="./scripts/galleryWrap.js" defer></script>
-        <script src="./scripts/movieGallery.js" defer></script>
         <script src="./scripts/galleryActionMovies.js" defer></script>
         <script src="./scripts/galleryAnimationMovies.js" defer></script>
         <script src="./scripts/gallerySciFiMovies.js" defer></script>
         <script src="./scripts/galleryBestMovies.js" defer></script>
+        <script src="./scripts/bestMovie.js" defer></script>
         <title>JustStreamIt</title>
     </head>
     <body class="container">
@@ -35,10 +34,10 @@
                 <li>
                   <a href="#">Films</a>
                   <ul>
-                    <li><a href="./files/best-movies.html">Les Mieux Notés</a></li>
-                    <li><a href="./files/action-movies.html">Action</a></li>
-                    <li><a href="./files/animation-movies.html">Animation</a></li>
-                    <li><a href="./files/scifi-movies.html">Drama</a></li>
+                    <li><a href="">Les Mieux Notés</a></li>
+                    <li><a href="">Action</a></li>
+                    <li><a href="">Animation</a></li>
+                    <li><a href="">Science-Fiction</a></li>
                   </ul>
                 </li>
                 <li>
@@ -50,76 +49,47 @@
         </header>        
 
         <main>
-            <!-- <div class="best_movie">
-              <h2>Meilleur film</h2>
-              <img src="#" alt="Affiche du meilleur film">
-            </div> -->
+            <div class="bestMovie-section">
+              <h2>Meilleur film :</h2>
+                <div class="bestMovie-content">
+                  <div class="bestMovie__image"></div>
+                </div>
+            </div>
+
             <div class="gallery__wrap">
               <h2>Film les mieux notés :</h2>
-              <img src="./public/images/gallerie/back.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
-                <div class="gallery gallery__liste best-movies">
-                  <!-- <span><img src="./public/images/gallerie/image-1.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-2.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-3.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-4.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-5.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span> -->
-                </div>
+                <div class="gallery gallery__liste best-movies"></div>
               </div>
-              <img src="./public/images/gallerie/next.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
            
             <div class="gallery__wrap">
               <h2>Film Action :</h2>
-              <img src="./public/images/gallerie/back.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
-                <div class="gallery gallery__liste action-movies">
-                  <!-- <span><img src="./public/images/gallerie/image-1.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-2.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-3.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-4.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-5.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span> -->
-                </div>
+                <div class="gallery gallery__liste action-movies"></div>
               </div>
-              <img src="./public/images/gallerie/next.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
 
 
             <div class="gallery__wrap">
               <h2>Film Animation :</h2>
-              <img src="./public/images/gallerie/back.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
-                <div class="gallery gallery__liste animation-movies">
-                  <!-- <span><img src="./public/images/gallerie/image-1.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-2.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-3.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-4.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-5.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span> -->
-                </div>
+                <div class="gallery gallery__liste animation-movies"></div>
               </div>
-              <img src="./public/images/gallerie/next.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
 
             <div class="gallery__wrap">
               <h2>Film Science-Fiction :</h2>
-              <img src="./public/images/gallerie/back.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
-                <div class="gallery gallery__liste scifi-movies">
-                  <!-- <span><img src="./public/images/gallerie/image-1.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-2.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-3.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-4.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-5.png" class="gallery__liste__films"></span>
-                  <span><img src="./public/images/gallerie/image-6.png" class="gallery__liste__films"></span> -->
-                </div>
-              <img src="./public/images/gallerie/next.png" class="nextBtn">
+                <div class="gallery gallery__liste scifi-movies"></div>
+              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
         </main>
 
@@ -144,14 +114,17 @@
               <div class="footer-section">
                 <h3 class="footer__title">Suivez-nous</h3>
                 <ul class="footer__social-media">
-                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <!-- <li><a href="https://fr-fr.facebook.com/"><img src="./public/images/facebook_icone.png" alt="logo facebook" class="icones"></a></li>
+                  <li><a href="https://twitter.com/?lang=fr"><img src="./public/images/twitter_icone.png" alt="logo twitter" class="icones"></a></li>
+                  <li><a href="https://www.youtube.com/"><img src="./public/images/youtube_icone.png" alt="logo youtube" class="icones"></a></li> -->
                 </ul>
               </div>
             </div>
             <div class="bottom-footer">
-              <p class="bottom-footer__text">  <footer class="footer">@ 2023 JustStreamIt. Tous droits réservés.</p>
+              <footer class="footer">
+                <p class="bottom-footer bottom-footer__text">@ 2023 JustStreamIt. Tous droits réservés.</p>
+              </footer>
+              
             </div>
           </footer>
     </body>

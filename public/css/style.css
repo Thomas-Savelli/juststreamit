@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
+@charset "UTF-8";
 .container {
   width: 100%;
   margin: 0 auto;
   color: white;
+  font-family: "Cinzel", serif;
   background-image: url(file:///C:/Users/thoma/Desktop/OpenClassrooms/Parcours%20DA%20PYTHON/Projet_6/public/images/binding_dark.webp);
+}
+
+.bestMovie-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bestMovie-section h2 {
+  left: 10%;
+  color: #2069EB;
+  font-size: 1.4em;
+  border-bottom: 1px solid #2069EB;
+}
+.bestMovie-section .bestMovie-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bestMovie-section .bestMovie-content .bestMovie__image {
+  margin: 10px;
+  width: 80%;
+  height: 400px; /* Ajustez la hauteur souhaitée */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s;
+}
+.bestMovie-section .bestMovie-content .bestMovie__image:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .gallery__wrap {
@@ -20,15 +48,15 @@ body {
 .gallery__wrap h2 {
   position: absolute;
   top: -40px;
-  left: 250px;
+  left: 10%;
   right: 0;
   margin: 0;
   text-align: left;
   color: #2069EB;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 .gallery__wrap .gallery {
-  width: 1800px;
+  width: 80%;
   display: flex;
   overflow: scroll;
 }
@@ -36,6 +64,7 @@ body {
   display: none;
 }
 .gallery__wrap .gallery__liste {
+  border-top: 1px solid #2069EB;
   width: 200%;
   display: flex;
   grid-template-columns: auto auto auto auto auto auto auto;
@@ -45,7 +74,7 @@ body {
 }
 .gallery__wrap .gallery__liste__films {
   width: 200%;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   transition: transform 0.5s;
 }
 .gallery__wrap .gallery__liste__films:hover {
@@ -56,16 +85,16 @@ body {
 .gallery__wrap .backBtn,
 .gallery__wrap .nextBtn {
   position: absolute;
-  width: 50px;
+  width: 40px;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
 }
 .gallery__wrap .backBtn {
-  left: 180px;
+  left: 5%;
 }
 .gallery__wrap .nextBtn {
-  right: 170px;
+  right: 5%;
 }
 
 .header {
@@ -78,6 +107,7 @@ body {
   padding-left: 5em;
   margin-top: 2.6em;
   border-top: 2px solid #2069EB;
+  border-bottom: 2px solid #2069EB;
 }
 .header__logo {
   max-width: 80px;
@@ -97,19 +127,24 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  top: 100%;
+  left: 0;
+  z-index: 1;
 }
 .header__nav ul li {
   display: inline-block;
   position: relative;
+  margin-right: 50px;
+  margin-top: 15px;
 }
 .header__nav ul li a {
   color: white;
   text-decoration: none;
   margin-left: 10px;
   font-family: "Secular One", sans-serif;
-  font-size: 1em;
   padding-right: 1em;
   padding-left: 1em;
+  white-space: nowrap; /* Empêcher le texte de se diviser sur plusieurs lignes */
 }
 .header__nav ul li a:hover {
   color: #2069EB;
@@ -120,54 +155,13 @@ body {
 .header__nav ul li ul {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
 }
 .header__nav ul li ul li {
   display: block;
+  width: 100%;
 }
 .header__nav ul li:hover ul {
   display: block;
-}
-
-.footer {
-  padding: 20px;
-}
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  font-size: 0.8em;
-}
-.footer__title {
-  color: #2069EB;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.footer__text {
-  margin-bottom: 8px;
-}
-.footer__list {
-  list-style: none;
-  padding: 0;
-}
-.footer__link {
-  color: white;
-  text-decoration-line: none;
-}
-.footer__social-media {
-  display: flex;
-  align-items: center;
-}
-.footer__social-media li {
-  margin-right: 10px;
-}
-.footer .bottom-footer {
-  margin-top: 20px;
-}
-.footer .bottom-footer p {
-  font-size: 1em;
 }
 
 .footer-container {
@@ -178,6 +172,58 @@ body {
   gap: 6em;
   padding-bottom: 1em;
   padding-left: 1em;
+}
+
+.footer {
+  padding: 20px;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+}
+.footer__title {
+  color: #2069EB;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.footer__text {
+  font-family: "Secular One", sans-serif;
+  margin-bottom: 5%;
+}
+.footer__list {
+  font-family: "Secular One", sans-serif;
+  list-style: none;
+  padding: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration-line: none;
+}
+.footer__social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer__social-media li {
+  list-style: none;
+  margin-right: 0%;
+}
+.footer__social-media li img {
+  width: 3%;
+  height: auto;
+}
+.footer .bottom-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+.footer .bottom-footer__text {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */
