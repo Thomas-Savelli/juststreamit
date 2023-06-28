@@ -23,16 +23,6 @@ async function fetchBestMovie() {
       bestMovieImage.style.backgroundSize = 'cover';
       bestMovieImage.style.backgroundPosition = 'center';
 
-      // // Mettre à jour les informations du meilleur film
-      // bestMovieInfo.innerHTML = `
-      //   <h3>${movie.title}</h3>
-      //   <p>Année : ${movie.year}</p>
-      //   <p>Réalisateur : ${movie.directors}</p>
-      //   <p>Acteurs : ${movie.actors ? movie.actors.join(', ') : 'N/A'}</p>
-      //   <p>Score IMDb : ${movie.imdb_score}</p>
-      //   <p>Genres : ${movie.genres ? movie.genres.join(', ') : 'N/A'}</p>
-      //   <p>Pays : ${movie.countries ? movie.countries.join(', ') : 'N/A'}</p>
-      // `;
     } else {
       throw new Error('Une erreur s\'est produite lors de la récupération du meilleur film.');
     }

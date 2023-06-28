@@ -82,6 +82,9 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+.gallery__wrap .gallery__liste__films:hover .open-modal-button {
+  display: inline-block;
+}
 .gallery__wrap .backBtn,
 .gallery__wrap .nextBtn {
   position: absolute;
@@ -95,6 +98,10 @@
 }
 .gallery__wrap .nextBtn {
   right: 5%;
+}
+
+.open-modal-button {
+  display: none;
 }
 
 .header {

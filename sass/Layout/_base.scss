@@ -79,6 +79,9 @@
           filter: grayscale(0);
           cursor: pointer;
           transform: scale(1.1);
+          .open-modal-button {
+            display: inline-block;
+          }
         }
       }
     }
@@ -100,4 +103,8 @@
     .nextBtn {
       right: 5%;
     }
+  }
+
+  .open-modal-button{
+    display: none;
   }

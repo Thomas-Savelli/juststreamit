@@ -20,7 +20,6 @@
         <script src="./scripts/gallerySciFiMovies.js" defer></script>
         <script src="./scripts/galleryBestMovies.js" defer></script>
         <script src="./scripts/bestMovie.js" defer></script>
-        <script src="./scripts/modal.js" defer></script>
         <title>JustStreamIt</title>
     </head>
     <body class="container">
@@ -75,7 +74,6 @@
               <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
 
-
             <div class="gallery__wrap">
               <h2>Film Animation :</h2>
               <img src="./public/images/gallerie/backBtn.png" class="backBtn">
@@ -103,10 +101,21 @@
             tabindex="-1" class="c-dialog">
         <div role="document" class="c-dialog__box">
           <button type="button" aria-label="Fermer" title="Fermer cette fenetre modale" data-dismiss="dialog">X</button>
-          <h2 id="dialog-title">Ma fenetre modale</h2>
+          <h2 id="dialog-title"><span id="dialog-title"></span></h2>
           <p id="dialog-desc">Je suis une fenetre modale accessible</p>
+          <p><strong>Genres:</strong> <span id="dialog-genres"></span></p>
+          <p><strong>Date de sortie:</strong> <span id="dialog-releaseDate"></span></p>
+          <p><strong>Votes:</strong> <span id="dialog-votes"></span></p>
+          <p><strong>Score IMDB:</strong> <span id="dialog-imdbScore"></span></p>
+          <p><strong>Réalisateurs:</strong> <span id="dialog-directors"></span></p>
+          <p><strong>Acteurs:</strong> <span id="dialog-actors"></span></p>
+          <p><strong>Durée:</strong> <span id="dialog-duration"></span></p>
+          <p><strong>Pays:</strong> <span id="dialog-country"></span></p>
+          <p><strong>Résultat au box-office:</strong> <span id="dialog-boxOfficeResult"></span></p>
+          <p><strong>Résumé:</strong> <span id="dialog-plot"></span></p>
         </div>
       </div>
+      <script src="./scripts/modal.js" defer></script>
       <!-- Fin de la structure HTML de la fenetre modale -->
 
         <footer>
@@ -141,15 +150,6 @@
                 <p class="bottom-footer bottom-footer__text">@ 2023 JustStreamIt. Tous droits réservés.</p>
               </footer>
             </div>
-          </footer>
-          <div class="modal-container">
-            <div class="modal-content">
-              <h2 class="modal__title"></h2>
-              <p class="modal__info"></p>
-            </div>
-          </div>
-          
-          </div>
-          
+          </footer>   
     </body>
 </html> 

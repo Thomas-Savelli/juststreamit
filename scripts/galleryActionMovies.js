@@ -36,28 +36,33 @@ async function fetchActionMovies() {
     // Générer les éléments HTML pour chaque film et les ajouter à la galerie
     movies.forEach((movie) => {
       const movieImage = document.createElement('img');
+      // Vérifier si le film a une URL d'image valide
+      movieImage.src = movie.image_url ?? "../public/images/image404error.jpg";
       movieImage.alt = movie.title;
       movieImage.classList.add('gallery__liste__films');
+      
+      // Ajouter les attributs data pour chaque information du film
+      movieImage.dataset.title = movie.title;
+      movieImage.dataset.genres = movie.genres;
+      movieImage.dataset.year = movie.year;
+      movieImage.dataset.votes = movie.votes;
+      movieImage.dataset.imdb_score = movie.imdb_score;
+      movieImage.dataset.directors = movie.directors;
+      movieImage.dataset.actors = movie.actors;
+      movieImage.dataset.duration = movie.duration ?? "non communiqué";
+      movieImage.dataset.country = movie.country ?? "non communiqué";
+      movieImage.dataset.boxoffice_result = movie.boxoffice_result ?? "non communiqué";
+      movieImage.dataset.plot = movie.plot ?? "non communiqué";
 
-      // Vérifier si le film a une URL d'image valide
-      if (isValidImageUrl(movie.image_url)) {
-        movieImage.src = movie.image_url;
-      } else {
-        // Utiliser une image de remplacement à partir du dossier d'images
-        movieImage.src = "../public/images/image404error.jpg";
-      }
+      // Ajout d'un écouteur d'événements "click" pour ouvrir la fenêtre modale
+      movieImage.addEventListener('click', openModal)
 
       actionGallery.appendChild(movieImage);
+ 
     });
   } catch (error) {
     console.error(error);
   }
-}
-
-// Fonction pour vérifier si une URL d'image est valide
-function isValidImageUrl(url) {
-  // Vérifier si l'URL commence par "http://" ou "https://"
-  return /^https?:\/\/.*$/i.test(url);
 }
 
 fetchActionMovies();

@@ -36,9 +36,26 @@ async function fetchBestMovies() {
     // Générer les éléments HTML pour chaque film et les ajouter à la galerie
     movies.forEach((movie) => {
       const movieImage = document.createElement('img');
-      movieImage.src = movie.image_url;
+      // Vérifier si l'url de l'image est valide
+      movieImage.src = movie.image_url ?? "../public/images/image404error.jpg";
       movieImage.alt = movie.title;
       movieImage.classList.add('gallery__liste__films');
+
+      // Ajouter les attributs data pour chaque information du film
+      movieImage.dataset.title = movie.title;
+      movieImage.dataset.genres = movie.genres;
+      movieImage.dataset.year = movie.year;
+      movieImage.dataset.votes = movie.votes;
+      movieImage.dataset.imdb_score = movie.imdb_score;
+      movieImage.dataset.directors = movie.directors;
+      movieImage.dataset.actors = movie.actors;
+      movieImage.dataset.duration = movie.duration ?? "non communiqué";
+      movieImage.dataset.country = movie.country ?? "non communiqué";
+      movieImage.dataset.boxoffice_result = movie.boxoffice_result ?? "non communiqué";
+      movieImage.dataset.plot = movie.plot ?? "non communiqué";
+
+      // Ajout d'un écouteur d'événements "click" pour ouvrir la fenêtre modale
+      movieImage.addEventListener("click", openModal)
 
       bestMoviesGallery.appendChild(movieImage);
     });
