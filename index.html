@@ -20,6 +20,7 @@
         <script src="./scripts/gallerySciFiMovies.js" defer></script>
         <script src="./scripts/galleryBestMovies.js" defer></script>
         <script src="./scripts/bestMovie.js" defer></script>
+        <script src="./scripts/modal.js" defer></script>
         <title>JustStreamIt</title>
     </head>
     <body class="container">
@@ -91,7 +92,22 @@
                 <div class="gallery gallery__liste scifi-movies"></div>
               <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
+
+            <!-- bouton ouverture fenetre modale -->
+            <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenetre modale</button>
+            <!-- Fin bouton ouverture fenetre modale -->
+
         </main>
+        <!-- Structure HTML de la fenetre modale -->
+        <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true"
+            tabindex="-1" class="c-dialog">
+        <div role="document" class="c-dialog__box">
+          <button type="button" aria-label="Fermer" title="Fermer cette fenetre modale" data-dismiss="dialog">X</button>
+          <h2 id="dialog-title">Ma fenetre modale</h2>
+          <p id="dialog-desc">Je suis une fenetre modale accessible</p>
+        </div>
+      </div>
+      <!-- Fin de la structure HTML de la fenetre modale -->
 
         <footer>
             <div class="footer-container">
@@ -124,8 +140,16 @@
               <footer class="footer">
                 <p class="bottom-footer bottom-footer__text">@ 2023 JustStreamIt. Tous droits réservés.</p>
               </footer>
-              
             </div>
           </footer>
+          <div class="modal-container">
+            <div class="modal-content">
+              <h2 class="modal__title"></h2>
+              <p class="modal__info"></p>
+            </div>
+          </div>
+          
+          </div>
+          
     </body>
 </html> 

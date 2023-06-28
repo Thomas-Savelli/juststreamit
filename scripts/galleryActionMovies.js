@@ -1,5 +1,3 @@
-// galleryActionMovies.js
-
 // Sélectionner la galerie des films d'action
 const actionGallery = document.querySelector('.action-movies');
 
@@ -61,6 +59,5 @@ function isValidImageUrl(url) {
   // Vérifier si l'URL commence par "http://" ou "https://"
   return /^https?:\/\/.*$/i.test(url);
 }
-
 
 fetchActionMovies();
