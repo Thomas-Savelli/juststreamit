@@ -20,7 +20,30 @@
   max-width: 48rem;
   margin: auto;
   padding: 2.4rem;
-  background-color: white;
+  background-color: $background_color;
+  color: $color_base;
+
+  button{
+    justify-content: right;
+    color: $first_color;
+    background-color: $color_titre;
+    border-radius: 50%;
+    font-size: $second_size;
+    border: none;
+    text-size-adjust: $thrid_size;
+    &:hover{
+      color: black;
+    }
+  }
+
+  h2{
+    color: $color_titre;
+    font-family: $fontfamily_soustitre;
+    font-size: $first_size;
+  }
+  strong{
+    color: $color_titre;
+  }
 }
 
 // hidden dialog
@@ -28,3 +51,5 @@
   visibility: hidden;
   opacity: 0;
 }
+
+

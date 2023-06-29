@@ -37,7 +37,7 @@ async function fetchActionMovies() {
     movies.forEach((movie) => {
       const movieImage = document.createElement('img');
       // Vérifier si le film a une URL d'image valide
-      movieImage.src = movie.image_url ?? "../public/images/image404error.jpg";
+      movieImage.src = movie.image_url ?? "./public/images/image404error.jpg";
       movieImage.alt = movie.title;
       movieImage.classList.add('gallery__liste__films');
       

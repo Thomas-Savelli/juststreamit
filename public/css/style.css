@@ -253,7 +253,28 @@
   max-width: 48rem;
   margin: auto;
   padding: 2.4rem;
-  background-color: white;
+  background-color: #121212;
+  color: white;
+}
+.c-dialog__box button {
+  justify-content: right;
+  color: white;
+  background-color: #2069EB;
+  border-radius: 50%;
+  font-size: 1.4em;
+  border: none;
+  text-size-adjust: 0.8em;
+}
+.c-dialog__box button:hover {
+  color: black;
+}
+.c-dialog__box h2 {
+  color: #2069EB;
+  font-family: "Cinzel", serif;
+  font-size: 2em;
+}
+.c-dialog__box strong {
+  color: #2069EB;
 }
 
 .c-dialog[aria-hidden=true] {

@@ -3,7 +3,6 @@ const openButton = document.querySelector('button[aria-haspopup="dialog"]');
 const modal = document.getElementById('dialog');
 const closeButton = modal.querySelector('button[data-dismiss="dialog"]');
 const modalTitle = document.getElementById('dialog-title');
-const modalDesc = modal.querySelector('#dialog-desc');
 const modalGenres = document.getElementById('dialog-genres');
 const modalReleaseDate = document.getElementById('dialog-releaseDate');
 const modalVotes = document.getElementById('dialog-votes');
@@ -14,11 +13,13 @@ const modalDuration = document.getElementById('dialog-duration');
 const modalCountry = document.getElementById('dialog-country');
 const modalBoxOfficeResult = document.getElementById('dialog-boxOfficeResult');
 const modalPlot = document.getElementById('dialog-plot');
+const modalImage = document.getElementById('dialog-image');
 
 // Fonction pour ouvrir la fenêtre modale avec les informations du film
 function openModal() {
   // Récupérer les informations du film à partir des attributs data de l'élément cliqué
   const title = this.dataset.title;
+  const image_url = this.src ?? this.dataset.image_url ?? '../public/images/default.jpg';
   const genres = this.dataset.genres;
   const release_date = this.dataset.year;
   const votes = this.dataset.votes;
@@ -31,13 +32,20 @@ function openModal() {
   const plot = this.dataset.plot;
 
   // Mettre à jour les éléments HTML de la fenêtre modale avec les informations du film
+  modalImage.src = image_url;
   modalTitle.textContent = title;
-  modalGenres.textContent = genres;
+  modalImage.src = image_url;
+  // Ajout d'espaces entre les genres
+  const genresList = genres.split(',').map(genre => genre.trim()).join(', ');
+  modalGenres.textContent = genresList;
   modalReleaseDate.textContent = release_date;
   modalVotes.textContent = votes;
   modalImdbScore.textContent = imdb_score;
   modalDirectors.textContent = directors;
-  modalActors.textContent = actors;
+
+  // Ajouter des espaces après chaque virgule dans la liste des noms d'acteurs
+  const actorsList = actors.split(',').map(actor => actor.trim()).join(', ');
+  modalActors.textContent = actorsList;  
   modalDuration.textContent = duration;
   modalCountry.textContent = country;
   modalBoxOfficeResult.textContent = boxoffice_result;
