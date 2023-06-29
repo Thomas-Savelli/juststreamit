@@ -82,9 +82,6 @@
   cursor: pointer;
   transform: scale(1.1);
 }
-.gallery__wrap .gallery__liste__films:hover .open-modal-button {
-  display: inline-block;
-}
 .gallery__wrap .backBtn,
 .gallery__wrap .nextBtn {
   position: absolute;
@@ -98,10 +95,6 @@
 }
 .gallery__wrap .nextBtn {
   right: 5%;
-}
-
-.open-modal-button {
-  display: none;
 }
 
 .header {
@@ -256,8 +249,22 @@
   background-color: #121212;
   color: white;
 }
-.c-dialog__box button {
-  justify-content: right;
+.c-dialog__box__0 {
+  display: flex;
+  flex-direction: row;
+}
+.c-dialog__box__1 {
+  display: flex;
+  flex-direction: column;
+}
+.c-dialog__box__2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+  margin-top: 55px;
+}
+.c-dialog__box .btnCloseModal {
   color: white;
   background-color: #2069EB;
   border-radius: 50%;
@@ -265,7 +272,7 @@
   border: none;
   text-size-adjust: 0.8em;
 }
-.c-dialog__box button:hover {
+.c-dialog__box .btnCloseModal:hover {
   color: black;
 }
 .c-dialog__box h2 {
@@ -273,7 +280,17 @@
   font-family: "Cinzel", serif;
   font-size: 2em;
 }
-.c-dialog__box strong {
+.c-dialog__box img {
+  width: 20em;
+  height: auto;
+  margin-bottom: 1.6rem;
+  margin-right: 10px;
+  border-right: #2069EB solid 1px;
+}
+.c-dialog__box p {
+  margin-bottom: 1rem;
+}
+.c-dialog__box p strong {
   color: #2069EB;
 }
 
