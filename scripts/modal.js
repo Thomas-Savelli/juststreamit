@@ -59,8 +59,5 @@ function closeModal() {
   modal.setAttribute('aria-hidden', 'true');
 }
 
-// Ajouter un écouteur d'événement pour ouvrir la fenêtre modale
-openButton.addEventListener('click', openModal);
-
 // Ajouter un écouteur d'événement pour fermer la fenêtre modale
 closeButton.addEventListener('click', closeModal);

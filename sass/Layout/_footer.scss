@@ -16,6 +16,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
+      margin-left: 100px;
+      @media (max-width: 599px) {
+        margin-left: 0;
+      }
  
 
       font-size: $thrid_size;
@@ -46,27 +51,9 @@
       // Styles pour les liens du footer
     }
   
-    &__social-media {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      // Styles pour les icônes de médias sociaux
-  
-      li {
-        list-style: none;
-        margin-right: 0%;
-        // Styles pour chaque icône
-
-        img{
-          width: 3%;
-          height: auto;
-        }
-      }
-    }
-  
     .bottom-footer {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       margin-top: 20px;
@@ -74,6 +61,6 @@
       // Styles pour le bas du footer
       &__text{
         font-size: $thrid_size;
-      }
+      } 
     }
   }

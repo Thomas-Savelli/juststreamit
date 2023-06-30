@@ -24,6 +24,7 @@
     </head>
     <body class="container">
         <header class="header">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0">
             <img src="./public/images/logo.png" alt="JustStreamIt logo" class="header__logo" />
             <h1 class="header__title">JustStreamIt</h1>
             <nav class="header__nav">
@@ -33,11 +34,11 @@
                 </li>
                 <li>
                   <a href="#">Films</a>
-                  <ul>
-                    <li><a href="">Les Mieux Notés</a></li>
-                    <li><a href="">Action</a></li>
-                    <li><a href="">Animation</a></li>
-                    <li><a href="">Science-Fiction</a></li>
+                  <ul class="sous_menu">
+                    <li><a href="#best-movies">Les Mieux Notés</a></li>
+                    <li><a href="#action-movies">Action</a></li>
+                    <li><a href="#animation-movies">Animation</a></li>
+                    <li><a href="#scifi-movies">Science-Fiction</a></li>
                   </ul>
                 </li>
                 <li>
@@ -57,7 +58,7 @@
             </div>
 
             <div class="gallery__wrap">
-              <h2>Film les mieux notés :</h2>
+              <h2 id="best-movies">Film les mieux notés :</h2>
               <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste best-movies"></div>
@@ -66,7 +67,7 @@
             </div>
            
             <div class="gallery__wrap">
-              <h2>Film Action :</h2>
+              <h2 id="action-movies">Film Action :</h2>
               <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste action-movies"></div>
@@ -75,7 +76,7 @@
             </div>
 
             <div class="gallery__wrap">
-              <h2>Film Animation :</h2>
+              <h2 id="animation-movies">Film Animation :</h2>
               <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste animation-movies"></div>
@@ -84,16 +85,12 @@
             </div>
 
             <div class="gallery__wrap">
-              <h2>Film Science-Fiction :</h2>
+              <h2 id="scifi-movies">Film Science-Fiction :</h2>
               <img src="./public/images/gallerie/backBtn.png" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste scifi-movies"></div>
               <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
             </div>
-
-            <!-- bouton ouverture fenetre modale -->
-            <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenetre modale</button>
-            <!-- Fin bouton ouverture fenetre modale -->
 
         </main>
         <!-- Structure HTML de la fenetre modale -->
@@ -142,20 +139,13 @@
                   <li><a href="#" class="footer__link">Contact</a></li>
                 </ul>
               </div>
-              <div class="footer-section">
-                <h3 class="footer__title">Suivez-nous</h3>
-                <ul class="footer__social-media">
-                  <!-- <li><a href="https://fr-fr.facebook.com/"><img src="./public/images/facebook_icone.png" alt="logo facebook" class="icones"></a></li>
-                  <li><a href="https://twitter.com/?lang=fr"><img src="./public/images/twitter_icone.png" alt="logo twitter" class="icones"></a></li>
-                  <li><a href="https://www.youtube.com/"><img src="./public/images/youtube_icone.png" alt="logo youtube" class="icones"></a></li> -->
-                </ul>
-              </div>
+
             </div>
             <div class="bottom-footer">
-              <footer class="footer">
+              <div class="footer">
                 <p class="bottom-footer bottom-footer__text">@ 2023 JustStreamIt. Tous droits réservés.</p>
-              </footer>
+                </div>
             </div>
-          </footer>   
+        </footer>   
     </body>
 </html> 

@@ -10,12 +10,16 @@
     border-top: 2px solid $color_border;
     border-bottom: 2px solid $color_border;
     // Autres styles spécifiques à l'en-tête
-  
+
     &__logo {
       max-width: 80px;
       height: auto;
       padding-right: 2em;
       // Styles pour le logo
+      @media (max-width: 599px) {
+        padding-right: 1em;
+        max-width: 100px;
+      }
     }
   
     &__title {
@@ -23,13 +27,23 @@
       color: $color_titre;
       font-size: $first_size;
       margin-left: 20px;
+      @media (max-width: 599px) {
+        margin-left: 10px;
+      }
       // Styles pour le titre de l'en-tête
     }
-  
+
     &__nav {
       margin-left: auto;
       // Styles pour la navigation
-  
+
+
+      .sous_menu{
+        background-color: $background_color;
+        border-bottom: $color_border solid 1px;
+        border-left: $color_border solid 1px;
+      }
+
       ul {
         list-style: none;
         padding: 0;
@@ -43,7 +57,7 @@
           position: relative;
           margin-right: 50px;
           margin-top: 15px;
-        
+
           a {
             color: $first_color;
             text-decoration: none;

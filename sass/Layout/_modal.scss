@@ -22,13 +22,22 @@
   padding: 2.4rem;
   background-color: $background_color;
   color: $color_base;
+  @media (max-width: 599px) {
+    max-width: 90%; /* Ajustez la largeur souhaitée pour la version mobile */
+    padding: 1.6rem; /* Ajustez le padding souhaité pour la version mobile */
+  }
   &__0{
     display: flex;
     flex-direction: row;
+    @media (max-width: 599px) {
+      flex-direction: column; /* Afficher les éléments en colonne pour la version mobile */    }
   }
   &__1{
     display: flex;
     flex-direction: column;
+    @media (max-width: 599px) {
+      margin-bottom: 1.6rem; /* Ajouter une marge inférieure pour l'image dans la version mobile */
+    }  
   }
   &__2{
     display: flex;
@@ -36,6 +45,10 @@
     justify-content: center;
     margin-left: 15px;
     margin-top: 55px;
+    @media (max-width: 599px) {
+      margin-left: 0; /* Réinitialiser la marge gauche pour la version mobile */
+      margin-top: 1.6rem; /* Ajouter une marge supérieure pour les informations dans la version mobile */
+    }
   }
   .btnCloseModal{
     color: $first_color;
@@ -53,6 +66,9 @@
     color: $color_titre;
     font-family: $fontfamily_soustitre;
     font-size: $first_size;
+    @media (max-width: 599px) {
+      text-align: center;
+    }
   }
   img{
     width: 20em;
@@ -60,6 +76,11 @@
     margin-bottom: 1.6rem;
     margin-right: 10px;
     border-right: $color_border solid 1px;
+    @media (max-width: 599px) {
+      width: 75%; /* Ajustez la largeur souhaitée pour l'image dans la version mobile */
+      border-right: none; /* Supprimer la bordure droite de l'image dans la version mobile */
+      margin: 0 auto; /* Centrer l'image horizontalement */    
+    }
   }
   p{
     margin-bottom: 1rem;
