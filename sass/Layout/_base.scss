@@ -94,9 +94,7 @@
         transition: transform 0.5s;
         @media (max-width: 599px) {
           width:200%;
-
         }
-  
         &:hover {
           filter: grayscale(0);
           cursor: pointer;
@@ -105,7 +103,6 @@
       }
     }
   }
-   
     .backBtn,
     .nextBtn {
       position: absolute;

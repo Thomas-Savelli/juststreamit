@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./public/css/style.css"/>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./public/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-        <link rel="icon" href="./public/images/Sans titre - 3.png" type="image/x-icon">
         <link rel="shortcut icon" href="./public/images/juststreamit_logo3.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative:wght@700&family=Foldit:wght@500&family=Lobster&family=Orbitron&family=Secular+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script src="./scripts/galleryWrap.js" defer></script>
         <script src="./scripts/galleryActionMovies.js" defer></script>
         <script src="./scripts/galleryAnimationMovies.js" defer></script>
@@ -24,8 +24,7 @@
     </head>
     <body class="container">
         <header class="header">
-          <meta name="viewport" content="width=device-width,initial-scale=1.0">
-            <img src="./public/images/logo.png" alt="JustStreamIt logo" class="header__logo" />
+            <img src="./public/images/logo.png" alt="JustStreamIt logo" class="header__logo">
             <h1 class="header__title">JustStreamIt</h1>
             <nav class="header__nav">
               <ul>
@@ -59,39 +58,39 @@
 
             <div class="gallery__wrap">
               <h2 id="best-movies">Film les mieux notés :</h2>
-              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" alt="Bouton précédent" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste best-movies"></div>
               </div>
-              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" alt="Bouton suivant" class="nextBtn">
             </div>
            
             <div class="gallery__wrap">
               <h2 id="action-movies">Film Action :</h2>
-              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" alt="Bouton précédent" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste action-movies"></div>
               </div>
-              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" alt="Bouton suivant" class="nextBtn">
             </div>
 
             <div class="gallery__wrap">
               <h2 id="animation-movies">Film Animation :</h2>
-              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" alt="Bouton précédent" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste animation-movies"></div>
               </div>
-              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" alt="Bouton suivant" class="nextBtn">
             </div>
 
             <div class="gallery__wrap">
               <h2 id="scifi-movies">Film Science-Fiction :</h2>
-              <img src="./public/images/gallerie/backBtn.png" class="backBtn">
+              <img src="./public/images/gallerie/backBtn.png" alt="Bouton précédent" class="backBtn">
               <div class="gallery ">
                 <div class="gallery gallery__liste scifi-movies"></div>
-              <img src="./public/images/gallerie/nextBtn.png" class="nextBtn">
+              <img src="./public/images/gallerie/nextBtn.png" alt="Bouton suivant" class="nextBtn">
+              </div>
             </div>
-
         </main>
         <!-- Structure HTML de la fenetre modale -->
         <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true"
@@ -100,8 +99,8 @@
             <button type="button" aria-label="Fermer" title="Fermer cette fenetre modale" data-dismiss="dialog" class="btnCloseModal">X</button>
             <div class="c-dialog__box__0">
               <div class="c-dialog__box__1">
-                <h2 id="dialog-title"><span id="dialog-title"></span></h2>
-                <img id="dialog-image" src="" alt="Movie Image">
+                <h2><span id="dialog-title"></span></h2>
+                <img id="dialog-image" src="#" alt="Movie Image">
               </div>
             <div class="c-dialog__box__2">
               <p><strong>Genres:</strong> <span id="dialog-genres"></span></p>

@@ -19,7 +19,7 @@ const modalImage = document.getElementById('dialog-image');
 function openModal() {
   // Récupérer les informations du film à partir des attributs data de l'élément cliqué
   const title = this.dataset.title;
-  const image_url = this.src ?? this.dataset.image_url ?? '../public/images/default.jpg';
+  const image_url = this.src ?? this.dataset.image_url;
   const genres = this.dataset.genres;
   const release_date = this.dataset.year;
   const votes = this.dataset.votes;

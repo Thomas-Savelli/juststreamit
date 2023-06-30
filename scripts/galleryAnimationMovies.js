@@ -36,7 +36,7 @@ async function fetchAnimationMovies() {
     // Générer les éléments HTML pour chaque film et les ajouter à la galerie
     movies.forEach((movie) => {
       const movieImage = document.createElement('img');
-      movieImage.src = movie.image_url ?? "../public/images/image404error.jpg";
+      movieImage.src = movie.image_url;
       movieImage.alt = movie.title;
       movieImage.classList.add('gallery__liste__films');
 
